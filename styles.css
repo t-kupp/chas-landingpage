@@ -47,13 +47,15 @@ nav {
 
 .ansök-button,
 .ansök-button-hero {
-  color: var(--main-beige);
-  background-color: var(--main-red);
+  color: var(--main-red);
+  background-color: var(--main-beige);
+  outline: 2px solid var(--main-red);
 }
 
 .ansök-button:hover,
 .ansök-button-hero:hover {
-  outline: 2px solid var(--main-grey);
+  color: var(--main-beige);
+  background-color: var(--main-red);
 }
 
 .hero-wrapper {
@@ -71,13 +73,13 @@ nav {
 
 .hero-headline {
   font-size: 48px;
-  width: 600px;
+  width: 800px;
   margin-bottom: 20px;
 }
 .hero-subtext {
-  font-size: 24px;
+  font-size: 20px;
   width: 600px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .ansök-button-hero {
@@ -97,7 +99,6 @@ nav {
 }
 
 .info-img {
-  height: 400px;
   width: 400px;
 }
 
@@ -105,7 +106,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 400px;
+  width: 500px;
 }
 
 .info-headline,
@@ -135,13 +136,27 @@ nav {
   display: flex;
 }
 
+.student {
+  padding: 10px;
+  width: 33%;
+}
+
 .student-img {
   height: 200px;
 }
 
-.student-text {
+.student-headline {
+  font-weight: 700;
+}
+
+.student-paragraph {
   font-weight: 500;
-  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.student-name {
+  margin-top: 30px;
+  font-weight: 600;
 }
 
 .ansökan-wrapper {
@@ -156,20 +171,23 @@ nav {
 }
 
 .ansökan-subtext {
+  font-weight: 500;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .ansökan-button {
   font-size: 20px;
   font-weight: 600;
   padding: 6px 12px;
-  color: var(--main-beige);
-  background-color: var(--main-red);
+  color: var(--main-red);
+  background-color: var(--main-beige);
+  outline: 2px solid var(--main-red);
 }
 
 .ansökan-button:hover {
-  outline: 2px solid var(--main-grey);
+  color: var(--main-beige);
+  background-color: var(--main-red);
 }
 
 .footer {
