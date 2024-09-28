@@ -1,0 +1,218 @@
+@font-face {
+  font-family: Din-regular;
+  src: url(/fonts/DIN-Regular.woff) format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Din-regular;
+  src: url(/fonts/DIN-Medium.woff) format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Din-condensed;
+  src: url(/fonts/DIN-condensed.ttf);
+  font-weight: 400;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-gray: #2b2f2f;
+  --color-light-gray: #f8f9f9;
+  --color-blue: #4f65f7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: DIN-regular, sans-serif;
+  color: var(--color-dark-gray);
+}
+
+/* General start */
+
+.headline-small {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.headline-big {
+  font-family: Din-condensed;
+  font-size: 56px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.subtext {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.button-black {
+  cursor: pointer;
+  color: var(--color-light-gray);
+  background-color: var(--color-dark-gray);
+  font-family: Din-condensed;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 12px 22px;
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 99px;
+  transition: all 0.2s ease-in;
+}
+
+.button-black:hover {
+  color: var(--color-dark-gray);
+  background-color: var(--color-white);
+}
+
+.button-white {
+  cursor: pointer;
+  color: var(--color-dark-gray);
+  background-color: var(--color-white);
+  font-family: Din-condensed;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 12px 22px;
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 99px;
+  transition: all 0.2s ease-in;
+}
+
+.button-white:hover {
+  color: var(--color-light-gray);
+  background-color: var(--color-dark-gray);
+}
+
+/* Header start */
+
+.header {
+  position: absolute;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  padding: 0 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chas-logo {
+  height: 72px;
+  width: 72px;
+}
+
+.nav-link {
+  font-family: Din-regular;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 16px;
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-ansök {
+  font-family: Din-condensed;
+  text-transform: uppercase;
+  background-color: var(--color-blue);
+  padding: 8px 22px;
+  border: 1px solid var(--color-blue);
+  border-radius: 20px;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in;
+}
+
+.nav-ansök:hover {
+  color: var(--color-blue);
+  background-color: var(--color-white);
+  text-decoration: none;
+}
+
+/* Hero start  */
+
+.hero {
+  background-image: url(/img/hero-background.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding: 220px 80px 80px 80px;
+  text-align: center;
+  align-items: center;
+}
+
+.hero-headline {
+  color: var(--color-white);
+  font-family: Din-condensed;
+  text-transform: uppercase;
+  font-size: 88px;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.hero-subtext {
+  color: var(--color-white);
+  font-family: Din-condensed;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 260px;
+  margin-top: 50px;
+}
+
+.arrow-down {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  padding: 8px 14px;
+  border-radius: 99px;
+  text-align: center;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+/* get-to-know-us start  */
+
+.get-to-know-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+}
+
+.get-to-know-us-img {
+  width: 40%;
+  height: width;
+}
+
+.get-to-know-us-text-wrapper {
+  width: 50%;
+}
+
+.get-to-know-us-text-wrapper > h2 {
+  margin: 20px 0;
+}
+
+.get-to-know-us-text-wrapper > .subtext {
+  max-width: 90%;
+}
+
+.get-to-know-us-button-wrapper {
+  margin-top: 50px;
+}
+
+.get-to-know-us-button-wrapper > .button-black {
+  margin-right: 40px;
+}
