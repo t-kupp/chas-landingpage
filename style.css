@@ -22,6 +22,7 @@
   --color-dark-gray: #2b2f2f;
   --color-light-gray: #f8f9f9;
   --color-blue: #4f65f7;
+  --color-cyan: #6ec3e4;
   --section-padding-x: 10vw;
   --section-padding-y: 90px;
 }
@@ -352,4 +353,144 @@ html {
   border-radius: 16px;
   width: 50%;
   height: width;
+}
+
+/* students start  */
+
+.students {
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.students > .headline-big {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 50px;
+  row-gap: 100px;
+}
+
+.students-img {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 34px;
+}
+
+.students-grid-element > .subtext {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* footer start  */
+
+.footer {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 420px;
+  gap: 64px;
+  align-items: center;
+  background-color: var(--color-light-gray);
+}
+
+.footer-left {
+  position: relative;
+  bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110%;
+  background-image: url(img/footer-background.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.footer-left-wrapper {
+  margin-top: 64px;
+  max-width: 280px;
+}
+
+.footer-left-wrapper > .headline-big {
+  font-size: 40px;
+}
+
+.footer-left-wrapper > .button-white {
+  padding: 12px 48px;
+  display: inline-block;
+  margin-top: 48px;
+  background-color: var(--color-cyan);
+}
+
+.footer-left-wrapper > .button-white:hover {
+  background-color: var(--color-dark-gray);
+}
+
+.footer-middle {
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.footer-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-link {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0;
+  transition: all 0.2s ease-in;
+}
+
+.footer-link:hover {
+  opacity: 0.5;
+}
+
+.footer-contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-contact-header {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.footer-contact-subtext {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.contact-mail-wrapper {
+  margin: 30px 0;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-chas-logo {
+  width: 200px;
+}
+
+.footer-follow-wrapper > p {
+  margin-top: 64px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.footer-follow-link {
+  margin: 0 8px;
 }
