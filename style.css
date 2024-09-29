@@ -22,6 +22,8 @@
   --color-dark-gray: #2b2f2f;
   --color-light-gray: #f8f9f9;
   --color-blue: #4f65f7;
+  --section-padding-x: 10vw;
+  --section-padding-y: 90px;
 }
 
 * {
@@ -30,6 +32,10 @@
   box-sizing: border-box;
   font-family: DIN-regular, sans-serif;
   color: var(--color-dark-gray);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* General start */
@@ -65,11 +71,12 @@
   border: 1px solid var(--color-dark-gray);
   border-radius: 99px;
   transition: all 0.2s ease-in;
+  text-decoration: none;
 }
 
 .button-black:hover {
   color: var(--color-dark-gray);
-  background-color: var(--color-white);
+  background-color: var(--color-white) !important;
 }
 
 .button-white {
@@ -85,6 +92,7 @@
   border: 1px solid var(--color-dark-gray);
   border-radius: 99px;
   transition: all 0.2s ease-in;
+  text-decoration: none;
 }
 
 .button-white:hover {
@@ -95,14 +103,16 @@
 /* Header start */
 
 .header {
-  position: absolute;
+  background-color: var(--color-white);
+  position: sticky;
   top: 0;
-  height: 100px;
+  height: 90px;
   width: 100%;
   padding: 0 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 8px 14px rgba(80, 80, 80, 0.1);
 }
 
 .chas-logo {
@@ -116,7 +126,7 @@
   font-weight: 500;
   margin: 0 16px;
   cursor: pointer;
-  color: var(--color-white);
+  color: var(--color-dark-gray);
 }
 
 .nav-link:hover {
@@ -126,6 +136,7 @@
 .nav-ansök {
   font-family: Din-condensed;
   text-transform: uppercase;
+  color: var(--color-white);
   background-color: var(--color-blue);
   padding: 8px 22px;
   border: 1px solid var(--color-blue);
@@ -140,6 +151,11 @@
   text-decoration: none;
 }
 
+.fa-chevron-down {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
 /* Hero start  */
 
 .hero {
@@ -149,7 +165,7 @@
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  padding: 220px 80px 80px 80px;
+  padding: var(--section-padding-y) var(--section-padding-x);
   text-align: center;
   align-items: center;
 }
@@ -181,6 +197,7 @@
   text-align: center;
   margin-top: 24px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* get-to-know-us start  */
@@ -189,7 +206,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5%;
+  padding: var(--section-padding-y) var(--section-padding-x);
+  background-color: var(--color-light-gray);
 }
 
 .get-to-know-us-img {
@@ -215,4 +233,123 @@
 
 .get-to-know-us-button-wrapper > .button-black {
   margin-right: 40px;
+}
+
+/* our-educations start  */
+
+.our-educations {
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.our-educations-text-wrapper {
+  width: 50%;
+}
+
+.our-educations-text-wrapper > h4 {
+  text-transform: unset;
+}
+
+.our-educations-text-wrapper > .headline-big {
+  margin-top: 20px;
+  margin-bottom: 26px;
+}
+
+.our-educations-text-wrapper > .subtext {
+  margin-bottom: 24px;
+}
+
+.our-educations-grid {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 24px;
+}
+
+.our-educations-grid-element {
+  padding: 6px;
+  border-radius: 8px;
+  background-color: var(--color-light-gray);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid var(--color-light-gray);
+  transition: all 0.2s ease-in;
+}
+
+.our-educations-grid-element:hover {
+  border: 1px solid var(--color-dark-gray);
+  transform: scale(1.015);
+}
+
+.our-educations-grid-img {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}
+
+.our-educations-grid-element > .headline-big {
+  font-size: 28px;
+  margin-left: 8px;
+}
+
+.our-educations > .button-black {
+  display: inline-block;
+  margin-top: 64px;
+  background-color: var(--color-black);
+}
+
+/* study-with-us start  */
+
+.study-with-us {
+  background-color: var(--color-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.study-with-us-text-wrapper {
+  width: 40%;
+}
+
+.study-with-us-text-wrapper > .headline-small,
+.study-with-us-text-wrapper > .headline-big,
+.study-with-us-text-wrapper > .subtext {
+  color: white;
+}
+
+.study-with-us-text-wrapper > .headline-big {
+  margin-top: 20px;
+  margin-bottom: 26px;
+}
+
+.study-with-us-button-wrapper {
+  margin-top: 64px;
+}
+
+.study-with-us-button-wrapper > .button-black {
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-white);
+  margin-right: 24px;
+}
+
+.study-with-us-button-wrapper > .button-black:hover {
+  color: var(--color-blue);
+}
+
+.study-with-us-button-wrapper > .button-white {
+  color: var(--color-blue);
+  border: 1px solid var(--color-white);
+}
+
+.study-with-us-button-wrapper > .button-white:hover {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+
+.study-with-us-video {
+  border-radius: 16px;
+  width: 50%;
+  height: width;
 }
