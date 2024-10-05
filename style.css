@@ -36,26 +36,27 @@
 }
 
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
 /* General start */
 
 .headline-small {
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 
 .headline-big {
   font-family: Din-condensed;
-  font-size: 56px;
+  font-size: 3.5rem;
   font-weight: 400;
   text-transform: uppercase;
 }
 
 .subtext {
-  font-size: 18px;
+  font-size: 1.1rem;
   line-height: 150%;
 }
 
@@ -64,7 +65,7 @@ html {
   color: var(--color-light-gray);
   background-color: var(--color-dark-gray);
   font-family: Din-condensed;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -85,7 +86,7 @@ html {
   color: var(--color-dark-gray);
   background-color: var(--color-white);
   font-family: Din-condensed;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -105,7 +106,7 @@ html {
 
 .header {
   background-color: var(--color-white);
-  position: sticky;
+  position: fixed;
   top: 0;
   height: 90px;
   width: 100%;
@@ -114,16 +115,16 @@ html {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 8px 14px rgba(80, 80, 80, 0.1);
+  z-index: 99;
 }
 
 .chas-logo {
-  height: 72px;
-  width: 72px;
+  width: 80px;
 }
 
 .nav-link {
   font-family: Din-regular;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 500;
   margin: 0 16px;
   cursor: pointer;
@@ -153,10 +154,37 @@ html {
 }
 
 .fa-chevron-down {
-  font-size: 14px;
+  font-size: 0.9rem;
   margin-left: 10px;
 }
 
+.hamburger-btn {
+  cursor: pointer;
+  position: fixed;
+  top: 34px;
+  right: 40px;
+  border: none;
+  background-color: inherit;
+  display: none;
+}
+
+.hamburger-btn > i {
+  font-size: 2rem;
+}
+
+.close-btn {
+  cursor: pointer;
+  position: fixed;
+  top: 34px;
+  right: 40px;
+  border: none;
+  background-color: inherit;
+  display: none;
+}
+
+.close-btn > i {
+  font-size: 2rem;
+}
 /* Hero start  */
 
 .hero {
@@ -167,6 +195,7 @@ html {
   display: flex;
   flex-direction: column;
   padding: var(--section-padding-y) var(--section-padding-x);
+  padding-top: 150px;
   text-align: center;
   align-items: center;
 }
@@ -175,7 +204,7 @@ html {
   color: var(--color-white);
   font-family: Din-condensed;
   text-transform: uppercase;
-  font-size: 88px;
+  font-size: 5.5rem;
   font-weight: 400;
   max-width: 700px;
 }
@@ -184,7 +213,7 @@ html {
   color: var(--color-white);
   font-family: Din-condensed;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 400;
   max-width: 260px;
   margin-top: 50px;
@@ -290,7 +319,7 @@ html {
 }
 
 .our-educations-grid-element > .headline-big {
-  font-size: 28px;
+  font-size: 1.8rem;
   margin-left: 8px;
 }
 
@@ -362,7 +391,7 @@ html {
 }
 
 .students > .headline-big {
-  font-size: 40px;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 64px;
 }
@@ -417,7 +446,7 @@ html {
 }
 
 .footer-left-wrapper > .headline-big {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .footer-left-wrapper > .button-white {
@@ -444,7 +473,7 @@ html {
 
 .footer-link {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 500;
   margin: 10px 0;
   transition: all 0.2s ease-in;
@@ -461,13 +490,13 @@ html {
 }
 
 .footer-contact-header {
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 500;
   margin: 10px 0;
 }
 
 .footer-contact-subtext {
-  font-size: 18px;
+  font-size: 1.1rem;
   text-decoration: none;
 }
 
@@ -493,4 +522,155 @@ html {
 
 .footer-follow-link {
   margin: 0 8px;
+  transition: all 0.2s ease-in;
+}
+
+.footer-follow-link:hover {
+  opacity: 0.7;
+}
+
+/* media scaling  */
+
+@media (max-width: 1280px) {
+  .header {
+    padding: 0 32px;
+  }
+  .nav-link {
+    font-size: 1rem;
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+
+  /* hamburger menu  */
+  .header {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-link {
+    display: none;
+    margin: 10px 5px;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .chas-logo {
+    margin-top: 5px;
+  }
+  /* hamburger end  */
+
+  .hero-headline {
+    font-size: 4.5rem;
+  }
+  .get-to-know-us {
+    flex-direction: column;
+  }
+  .get-to-know-us-img,
+  .get-to-know-us-text-wrapper {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .our-educations-text-wrapper {
+    width: 100%;
+  }
+
+  .our-educations-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .study-with-us {
+    flex-direction: column;
+  }
+  .study-with-us-text-wrapper,
+  .study-with-us-video {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .students-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-left {
+    grid-column: 1/3;
+  }
+
+  .footer-middle,
+  .footer-right {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  h2,
+  .hero-headline {
+    font-size: 3rem !important;
+  }
+
+  .our-educations-grid,
+  .students-grid,
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .footer-left {
+    grid-column: 1/2;
+  }
+
+  .study-with-us-button-wrapper,
+  .get-to-know-us-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .get-to-know-us-button-wrapper > .button-black,
+  .get-to-know-us-button-wrapper > .button-white,
+  .study-with-us-button-wrapper > .button-black,
+  .study-with-us-button-wrapper > .button-white {
+    margin-right: 0px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
 }
