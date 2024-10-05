@@ -1,18 +1,18 @@
 @font-face {
   font-family: Din-regular;
-  src: url(/fonts/DIN-Regular.woff) format("woff");
+  src: url(fonts/DIN-Regular.woff) format("woff");
   font-weight: 400;
 }
 
 @font-face {
   font-family: Din-regular;
-  src: url(/fonts/DIN-Medium.woff) format("woff");
+  src: url(fonts/DIN-Medium.woff) format("woff");
   font-weight: 500;
 }
 
 @font-face {
   font-family: Din-condensed;
-  src: url(/fonts/DIN-condensed.ttf);
+  src: url(fonts/DIN-condensed.ttf);
   font-weight: 400;
 }
 
@@ -188,7 +188,7 @@ html {
 /* Hero start  */
 
 .hero {
-  background-image: url(/img/hero-background.webp);
+  background-image: url(img/hero-background.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
